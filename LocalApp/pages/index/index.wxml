@@ -1,0 +1,20 @@
+<view class="root">
+  <swiper class="tabs" indicator-dots indicator-color="rgba(0,0,0,.2)" indicator-active-color="#666" autoplay interval="4000" duration="1000">
+    <block wx:for="{{imgurl}}" wx:key="id">
+      <swiper-item>
+        <navigator wx:if="{{item.link}}" url="{{item.link}}">
+          <image src="{{item.image}}" mode="aspectFill"></image>
+        </navigator>
+        <image wx:else src="{{item.image}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="main">
+    <view class="content">
+      <navigator url="../list/list?id={{item.id}}" class="content-item" wx:for="{{categories}}" wx:key="id">
+        <image src="{{item.icon}}"></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>
+</view>

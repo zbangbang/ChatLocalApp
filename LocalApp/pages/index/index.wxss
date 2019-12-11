@@ -1,0 +1,57 @@
+Page{
+  height: 100%;
+}
+
+.root{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background: #ccc; */
+}
+
+/*轮播图*/
+.tabs image{
+  width: 100%;
+  height: 380rpx;
+  background: pink;
+}
+
+/* 中间内容 */
+.main{
+  flex: 1;
+  margin-top: -5px;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .content-item{
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  width: 250rpx;
+  height: 250rpx;
+  border-bottom: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.content .content-item image{
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  /* margin: 0 auto; */
+  /* padding-top: 25px; */
+}
+
+.content .content-item text{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #888;
+}

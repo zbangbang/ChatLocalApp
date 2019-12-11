@@ -1,0 +1,27 @@
+<scroll-view class="scroll" scroll-y bindscrolltolower="lower">
+  <view class="search">
+    <input placeholder="请输入搜索内容" bindinput="searchInput"></input>
+    <view class="search-img" bindtap="searchClick"><image src="../../imgs/sousuo.png"></image></view>
+  </view>
+  <view class="content">
+    <navigator url="../shop/shop?id={{item.id}}&categoryid={{category.id}}" class="content-item" wx:for="{{shops}}" wx:key="id">
+      <image src="{{item.images[0]}}"></image>
+      <view class="detail">
+        <text class="detail-name">{{item.name}}</text>
+        <text class="detail-phone">手机号：{{item.phone}}</text>
+        <text class="detail-address">地址：{{item.address}}</text>
+      </view>
+      <view class="item-right">
+        <view class="right-num">{{item.score}}</view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:if="{{hasMore}}" class="bottom">
+    <button loading>加载更多</button>
+  </view>
+  <view wx:else class="bottom">
+    <button>没有更多了</button>
+  </view>
+</scroll-view>
+
+

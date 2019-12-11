@@ -1,0 +1,98 @@
+.content{
+  display: flex;
+  flex-direction: column;
+  background: #ccc;
+  overflow: hidden;
+}
+
+.slide{
+  width: 750rpx;
+  height: 600rpx;
+  /* background: red; */
+}
+
+.slide swiper-item{
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+}
+
+.slide image{
+  width: 720rpx;
+  height: 580rpx;
+}
+
+.detail{
+  width: 730rpx;
+  height: 160rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 5rpx 10rpx;
+  background: #f0f0f0;
+}
+
+.detail text{
+  margin: 2rpx 10rpx 5rpx 10rpx;
+  font-size: 30rpx;
+  font-weight: 550;
+}
+
+.detail .detail-phone,
+.detail .detail-address{
+  font-size: 24rpx;
+  font-weight: 400;
+}
+
+/* 评论 */
+.comment{
+  width: 730rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  /* justify-content: center;
+  align-items: center; */
+  margin: 10rpx 10rpx 0 10rpx;
+}
+
+.comment-top{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  /* background: red; */
+}
+
+.comment-top .comment-name{
+  font-size: 18px;
+  padding-top: 40rpx;
+  padding-left: 10rpx;
+}
+
+.comment-top .comment-right{
+  font-size: 14px;
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15rpx;
+  padding-right: 10rpx;
+}
+
+.comment-detail{
+  font-size: 14px;
+  margin-bottom: 10rpx;
+}
+
+.comment-images{
+  border-bottom: 1rpx solid #ccc;
+}
+
+.comment-images image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 10rpx;
+  margin-bottom: 20rpx;
+}

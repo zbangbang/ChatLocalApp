@@ -1,0 +1,41 @@
+<scroll-view class="content" scroll-y>
+  <swiper class="slide" indicator-dots indicator-color="rgba(0,0,0,.2)" indicator-active-color="#666" autoplay interval="5000" duration="1000">
+    <block wx:for="{{shops.images}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="detail">
+    <text class="detail-name">{{shops.name}}</text>
+    <text class="detail-phone">手机号：{{shops.phone}}</text>
+    <text class="detail-address">地址：{{shops.address}}</text>
+  </view>
+  <view class="comment" wx:if="{{comments.length}}">
+    <block wx:for="{{comments}}" wx:key="id">
+    <!-- <block wx:key="id"> -->
+      <view class="comment-top">
+        <text class="comment-name">{{item.name}}</text>
+        <view class="comment-right">
+          <text class="comment-score">{{item.rating}}</text>
+          <text class="comment-time">{{item.date}}</text>
+        </view>
+      </view>
+      <view class="comment-detail">{{item.content}}
+      </view>
+      <view class="comment-images">
+        <block wx:for="{{item.images}}" wx:key="id">
+          <image src="{{util.size(item)}}" mode="aspectFill"></image>
+        </block>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+
+<wxs module="util">
+  module.exports = {
+    size: function(item){
+      return item.replace('w.h','100.100');
+    }
+  }
+</wxs>

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/person/person",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/shop/shop"
+  ],
+  "window": {
+    "backgroundColor": "#666",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "本地服务",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/1.png",
+        "selectedIconPath": "imgs/1h.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "主页",
+        "iconPath": "imgs/11.png",
+        "selectedIconPath": "imgs/11h.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "主页",
+        "iconPath": "imgs/7.png",
+        "selectedIconPath": "imgs/7h.png"
+      }
+    ]
+  }
+}
